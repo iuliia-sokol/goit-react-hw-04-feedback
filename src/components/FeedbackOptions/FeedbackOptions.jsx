@@ -8,10 +8,10 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <BtnWrapper>
       {options.map(option => {
+        console.log(option);
         return (
-          <li>
+          <li key={option}>
             <Feedbackbtn
-              key={option}
               icon={icons[option]}
               type="button"
               status={option}
